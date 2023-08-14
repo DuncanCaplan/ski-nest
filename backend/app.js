@@ -7,7 +7,7 @@ app.use(cors());
 
 app.get("/", (req, res) => {
   try {
-    res.status(200).send("Hello there");
+    res.status(200).send("Hello there!");
   } catch (error) {
     res.status(500).send({ error: "Server error" });
   }
