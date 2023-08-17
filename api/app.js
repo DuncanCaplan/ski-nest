@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const resorts = require("./routes/resorts");
 
 const app = express();
 app.use(express.json());
@@ -12,5 +13,7 @@ app.get("/", (req, res) => {
     res.status(500).send({ error: "Server error" });
   }
 });
+
+app.use("/resorts", resorts);
 
 module.exports = app;
